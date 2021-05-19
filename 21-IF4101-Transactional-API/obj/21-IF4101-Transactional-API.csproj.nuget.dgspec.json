@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {}
+    "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {
+    "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
+        "projectUniqueName": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
         "projectName": "21-IF4101-Transactional-API",
-        "projectPath": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
+        "projectPath": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
         "packagesPath": "C:\\Users\\Vampirin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\obj\\",
+        "outputPath": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vampirin\\AppData\\Roaming\\NuGet\\NuGet.Config",

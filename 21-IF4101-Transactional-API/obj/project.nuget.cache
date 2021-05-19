@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "smEKKc9Ggth4i+0JXwyYCjgE2q7VqMbDvmxKqJpUtK0gKrUDPmBO2nLM9K/xOkPAj1uw+gT0oxCaEspXCnUVSg==",
+  "dgSpecHash": "tkePMxTjF2HnbCGpUFzVWiXYAipjRu/tzvBdMsiESGbTfeWGL2MGOvh0MEybwVS8l0yXZU6cxs9K4yhyJqRTng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
+  "projectFilePath": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vampirin\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Vampirin\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

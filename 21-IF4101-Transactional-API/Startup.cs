@@ -1,4 +1,4 @@
-using _21_IF4101_Transactional_API.Models;
+using _21_IF4101_Transactional_API.Models.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,11 +27,11 @@ namespace _21_IF4101_Transactional_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddControllers().AddNewtonsoftJson(options =>
-            //options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            services.AddControllers().AddNewtonsoftJson(options =>
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
-            services.AddControllersWithViews();
-            services.AddDbContext<_21IF4101TransactionalContext>(options =>
+            //services.AddControllersWithViews();
+            services.AddDbContext<_21IF4101TransactionalAPIContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 

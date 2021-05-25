@@ -4,27 +4,28 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace _21_IF4101_Transactional_API.Models
+namespace _21_IF4101_Transactional_API.Models.Entities
 {
-    public partial class _21IF4101TransactionalContext : DbContext
+    public partial class _21IF4101TransactionalAPIContext : DbContext
     {
-        public _21IF4101TransactionalContext()
+        public _21IF4101TransactionalAPIContext()
         {
         }
 
-        public _21IF4101TransactionalContext(DbContextOptions<_21IF4101TransactionalContext> options)
+        public _21IF4101TransactionalAPIContext(DbContextOptions<_21IF4101TransactionalAPIContext> options)
             : base(options)
         {
         }
 
         public virtual DbSet<News> News { get; set; }
+        public virtual DbSet<NewsComment> NewsComments { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=163.178.107.10;Initial Catalog=21-IF4101-Transactional;User ID=laboratorios;Password=KmZpo.2796");
+                optionsBuilder.UseSqlServer("Server=163.178.107.10;Initial Catalog=21-IF4101-Transactional-API;User ID=laboratorios;Password=KmZpo.2796");
             }
         }
 
@@ -62,6 +63,27 @@ namespace _21_IF4101_Transactional_API.Models
                 entity.Property(e => e.Title)
                     .IsRequired()
                     .HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<NewsComment>(entity =>
+            {
+                entity.ToTable("NewsComment");
+
+                entity.Property(e => e.Author)
+                    .IsRequired()
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Comment)
+                    .IsRequired()
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Date).HasColumnType("datetime");
+
+                entity.HasOne(d => d.IdNewsNavigation)
+                    .WithMany(p => p.NewsComments)
+                    .HasForeignKey(d => d.IdNews)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_NewsComment");
             });
 
             OnModelCreatingPartial(modelBuilder);

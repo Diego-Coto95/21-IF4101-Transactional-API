@@ -3,10 +3,15 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace _21_IF4101_Transactional_API.Models
+namespace _21_IF4101_Transactional_API.Models.Entities
 {
     public partial class News
     {
+        public News()
+        {
+            NewsComments = new HashSet<NewsComment>();
+        }
+
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
@@ -15,5 +20,7 @@ namespace _21_IF4101_Transactional_API.Models
         public DateTime ModificationDate { get; set; }
         public string FileNew { get; set; }
         public string Imagen { get; set; }
+
+        public virtual ICollection<NewsComment> NewsComments { get; set; }
     }
 }

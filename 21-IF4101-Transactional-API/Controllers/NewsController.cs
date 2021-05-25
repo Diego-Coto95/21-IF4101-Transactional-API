@@ -5,116 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using _21_IF4101_Transactional_API.Models;
-
-//namespace _21_IF4101_Transactional_API.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class NewsController : ControllerBase
-//    {
-//        private readonly _21IF4101TransactionalContext _context;
-
-//        public NewsController(_21IF4101TransactionalContext context)
-//        {
-//            _context = new _21IF4101TransactionalContext();
-//        }
-
-//        [Route("[action]")]
-//        // GET: api/News
-//        [HttpGet]
-//        public async Task<ActionResult<IEnumerable<News>>> GetNews()
-//        {
-//            return await _context.News.ToListAsync();
-//        }
-
-//        [Route("[action]")]
-//        // GET: api/News/1
-//        [HttpGet("{id}")]
-//        public async Task<ActionResult<News>> GetNews(int id)
-//        {
-//            var news = await _context.News.FindAsync(id);
-
-//            if (news == null)
-//            {
-//                return NotFound();
-//            }
-
-//            return news;
-//        }
-
-//        // PUT: api/News/5
-//        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-//        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-//        [Route("[action]")]
-//        [HttpPut("{id}")]
-//        public async Task<IActionResult> PutNews(int id, News news)
-//        {
-//            if (id != news.Id)
-//            {
-//                return BadRequest();
-//            }
-
-//            _context.Entry(news).State = EntityState.Modified;
-
-//            try
-//            {
-//                await _context.SaveChangesAsync();
-//            }
-//            catch (DbUpdateConcurrencyException)
-//            {
-//                if (!NewsExists(id))
-//                {
-//                    return NotFound();
-//                }
-//                else
-//                {
-//                    throw;
-//                }
-//            }
-
-//            return NoContent();
-//        }
-
-//        // POST: api/News
-//        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-//        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-//        [Route("[action]")]
-//        [HttpPost]
-//        public async Task<ActionResult<News>> PostNews(News news)
-//        {
-//            _context.News.Add(news);
-//            await _context.SaveChangesAsync();
-
-//            return CreatedAtAction("GetNews", new { id = news.Id }, news);
-//        }
-
-//        // DELETE: api/News/5
-//        [Route("[action]")]
-//        [HttpDelete("{id}")]
-//        public async Task<ActionResult<News>> DeleteNews(int id)
-//        {
-//            var news = await _context.News.FindAsync(id);
-//            if (news == null)
-//            {
-//                return NotFound();
-//            }
-
-//            _context.News.Remove(news);
-//            await _context.SaveChangesAsync();
-
-//            return news;
-//        }
-
-//        private bool NewsExists(int id)
-//        {
-//            return _context.News.Any(e => e.Id == id);
-//        }
-//    }
-//}
-
-
-
+using _21_IF4101_Transactional_API.Models.Entities;
 
 namespace _21_IF4101_Transactional_API.Controllers
 {
@@ -122,14 +13,14 @@ namespace _21_IF4101_Transactional_API.Controllers
     [ApiController]
     public class NewsController : ControllerBase
     {
-        private readonly _21IF4101TransactionalContext _context;
+        private readonly _21IF4101TransactionalAPIContext _context;
 
-        public NewsController(_21IF4101TransactionalContext context)
+        public NewsController(_21IF4101TransactionalAPIContext context)
         {
-            _context = new _21IF4101TransactionalContext();
+            _context = new _21IF4101TransactionalAPIContext();
         }
 
-        // GET: api/Student
+        // GET: api/News/GetNews
         [Route("[action]")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<News>>> GetNews()
@@ -145,12 +36,12 @@ namespace _21_IF4101_Transactional_API.Controllers
                 FileNew = newsItem.FileNew,
                 Imagen = newsItem.Imagen
 
-        }).ToListAsync();
+            }).ToListAsync();
 
         }
 
         [Route("[action]")]
-        // GET: api/Student/5
+        // GET: api/News/1
         [HttpGet("{id}")]
         public async Task<ActionResult<News>> GetNews(int id)
         {
@@ -164,7 +55,7 @@ namespace _21_IF4101_Transactional_API.Controllers
             return student;
         }
 
-        // PUT: api/News/5
+        // PUT: api/News/1 --->Also you have to put the id 
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [Route("[action]")]
@@ -197,7 +88,7 @@ namespace _21_IF4101_Transactional_API.Controllers
             return NoContent();
         }
 
-        // POST: api/Student
+        // POST: api/News/PostNews
         [Route("[action]")]
         [HttpPost]
         public async Task<ActionResult<News>> PostNews(News news)
@@ -209,7 +100,7 @@ namespace _21_IF4101_Transactional_API.Controllers
         }
 
         [Route("[action]")]
-        // DELETE: api/Student/5
+        // DELETE: api/News/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<News>> DeleteNews(int id)
         {

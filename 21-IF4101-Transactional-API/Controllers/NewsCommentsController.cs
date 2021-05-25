@@ -21,13 +21,22 @@ namespace _21_IF4101_Transactional_API.Controllers
         }
 
         // GET: api/NewsComments
+        [Route("[action]")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<NewsComment>>> GetNewsComments()
         {
-            return await _context.NewsComments.ToListAsync();
+            return await _context.NewsComments.Select(newsCommentItem => new NewsComment()
+            {
+                Id = newsCommentItem.Id,
+                Author = newsCommentItem.Author,
+                Date = newsCommentItem.Date,
+                Comment = newsCommentItem.Comment,
+                IdNews =newsCommentItem.IdNews
+            }).ToListAsync();
         }
 
-        // GET: api/NewsComments/5
+        // GET: api/NewsComments/1
+        [Route("[action]")]
         [HttpGet("{id}")]
         public async Task<ActionResult<NewsComment>> GetNewsComment(int id)
         {
@@ -37,47 +46,15 @@ namespace _21_IF4101_Transactional_API.Controllers
             {
                 return NotFound();
             }
-
             return newsComment;
         }
 
-        // PUT: api/NewsComments/5
+        // POST: api/NewsComments/PostNewsComment
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutNewsComment(int id, NewsComment newsComment)
-        {
-            if (id != newsComment.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(newsComment).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!NewsCommentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/NewsComments
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [Route("[action]")]
         [HttpPost]
-        public async Task<ActionResult<NewsComment>> PostNewsComment(NewsComment newsComment)
+        public async Task<ActionResult<News>> PostNewsComment(NewsComment newsComment)
         {
             _context.NewsComments.Add(newsComment);
             await _context.SaveChangesAsync();
@@ -85,7 +62,9 @@ namespace _21_IF4101_Transactional_API.Controllers
             return CreatedAtAction("GetNewsComment", new { id = newsComment.Id }, newsComment);
         }
 
+
         // DELETE: api/NewsComments/5
+        [Route("[action]")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<NewsComment>> DeleteNewsComment(int id)
         {

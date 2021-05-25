@@ -37,7 +37,6 @@ namespace _21_IF4101_Transactional_API.Controllers
                 Imagen = newsItem.Imagen
 
             }).ToListAsync();
-
         }
 
         [Route("[action]")]
@@ -45,14 +44,14 @@ namespace _21_IF4101_Transactional_API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<News>> GetNews(int id)
         {
-            var student = await _context.News.FindAsync(id);
+            var news = await _context.News.FindAsync(id);
 
-            if (student == null)
+            if (news == null)
             {
                 return NotFound();
             }
 
-            return student;
+            return news;
         }
 
         // PUT: api/News/1 --->Also you have to put the id 

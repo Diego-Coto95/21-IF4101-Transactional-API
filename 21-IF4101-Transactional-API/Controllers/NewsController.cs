@@ -11,7 +11,7 @@ namespace _21_IF4101_Transactional_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class NewsController : ControllerBase
+    public class NewsController : Controller
     {
         private readonly _21IF4101TransactionalAPIContext _context;
 
@@ -33,7 +33,7 @@ namespace _21_IF4101_Transactional_API.Controllers
                 Author = newsItem.Author,
                 PublicationDate = newsItem.PublicationDate,
                 ModificationDate = newsItem.ModificationDate,
-                FileNew = newsItem.FileNew,
+                FileNews = newsItem.FileNews,
                 Imagen = newsItem.Imagen
 
             }).ToListAsync();

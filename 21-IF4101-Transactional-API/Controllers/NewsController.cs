@@ -103,6 +103,16 @@ namespace _21_IF4101_Transactional_API.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<News>> DeleteNews(int id)
         {
+            var x = (from NewsComment in _context.NewsComment
+                     where NewsComment.IdNews == id
+                     select NewsComment).FirstOrDefault();
+
+            if (x != null)
+            {
+                _context.NewsComment.Remove(x);
+                await _context.SaveChangesAsync();
+            }
+
             var news = await _context.News.FindAsync(id);
             if (news == null)
             {

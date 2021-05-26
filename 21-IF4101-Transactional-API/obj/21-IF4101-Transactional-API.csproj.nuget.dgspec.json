@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {}
+    "E:\\UCR\\I - 2021\\Lenguajes\\Project\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {
+    "E:\\UCR\\I - 2021\\Lenguajes\\Project\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
+        "projectUniqueName": "E:\\UCR\\I - 2021\\Lenguajes\\Project\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
         "projectName": "21-IF4101-Transactional-API",
-        "projectPath": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
-        "packagesPath": "C:\\Users\\Vampirin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\obj\\",
+        "projectPath": "E:\\UCR\\I - 2021\\Lenguajes\\Project\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
+        "packagesPath": "C:\\Users\\José David\\.nuget\\packages\\",
+        "outputPath": "E:\\UCR\\I - 2021\\Lenguajes\\Project\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Vampirin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\José David\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

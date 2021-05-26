@@ -58,13 +58,9 @@ namespace _21_IF4101_Transactional_API.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [Route("[action]")]
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutNews(int id, News news)
+        [HttpPut]
+        public async Task<IActionResult> PutNews(News news)
         {
-            if (id != news.Id)
-            {
-                return BadRequest();
-            }
 
             _context.Entry(news).State = EntityState.Modified;
 
@@ -74,7 +70,7 @@ namespace _21_IF4101_Transactional_API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!NewsExists(id))
+                if (!NewsExists(news.Id))
                 {
                     return NotFound();
                 }

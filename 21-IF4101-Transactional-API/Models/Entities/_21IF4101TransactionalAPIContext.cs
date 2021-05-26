@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-#nullable disable
+// Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
+// If you have enabled NRTs for your project, then un-comment the following line:
+// #nullable disable
 
 namespace _21_IF4101_Transactional_API.Models.Entities
 {
@@ -18,21 +20,19 @@ namespace _21_IF4101_Transactional_API.Models.Entities
         }
 
         public virtual DbSet<News> News { get; set; }
-        public virtual DbSet<NewsComment> NewsComments { get; set; }
+        public virtual DbSet<NewsComment> NewsComment { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=163.178.107.10;Initial Catalog=21-IF4101-Transactional-API;User ID=laboratorios;Password=KmZpo.2796");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "Modern_Spanish_CI_AS");
-
             modelBuilder.Entity<News>(entity =>
             {
                 entity.Property(e => e.Author)
@@ -45,20 +45,23 @@ namespace _21_IF4101_Transactional_API.Models.Entities
 
                 entity.Property(e => e.FileNews)
                     .IsRequired()
-                    .HasMaxLength(150)
-                    .HasColumnName("FileNews");
+                    .HasMaxLength(150);
 
                 entity.Property(e => e.Imagen)
                     .IsRequired()
                     .HasMaxLength(200);
 
                 entity.Property(e => e.ModificationDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("Modification_Date");
+                    .IsRequired()
+                    .HasColumnName("Modification_Date")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.PublicationDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("Publication_Date");
+                    .IsRequired()
+                    .HasColumnName("Publication_Date")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Title)
                     .IsRequired()
@@ -67,8 +70,6 @@ namespace _21_IF4101_Transactional_API.Models.Entities
 
             modelBuilder.Entity<NewsComment>(entity =>
             {
-                entity.ToTable("NewsComment");
-
                 entity.Property(e => e.Author)
                     .IsRequired()
                     .IsUnicode(false);
@@ -77,10 +78,13 @@ namespace _21_IF4101_Transactional_API.Models.Entities
                     .IsRequired()
                     .IsUnicode(false);
 
-                entity.Property(e => e.Date).HasColumnType("datetime");
+                entity.Property(e => e.Date)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
                 entity.HasOne(d => d.IdNewsNavigation)
-                    .WithMany(p => p.NewsComments)
+                    .WithMany(p => p.NewsComment)
                     .HasForeignKey(d => d.IdNews)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_NewsComment");

@@ -25,13 +25,13 @@ namespace _21_IF4101_Transactional_API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<NewsComment>>> GetNewsComments()
         {
-            return await _context.NewsComments.Select(newsCommentItem => new NewsComment()
+            return await _context.NewsComment.Select(newsCommentItem => new NewsComment()
             {
                 Id = newsCommentItem.Id,
                 Author = newsCommentItem.Author,
                 Date = newsCommentItem.Date,
                 Comment = newsCommentItem.Comment,
-                IdNews =newsCommentItem.IdNews
+                IdNews = newsCommentItem.IdNews
             }).ToListAsync();
         }
 
@@ -40,7 +40,7 @@ namespace _21_IF4101_Transactional_API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<NewsComment>> GetNewsComment(int id)
         {
-            var newsComment = await _context.NewsComments.FindAsync(id);
+            var newsComment = await _context.NewsComment.FindAsync(id);
 
             if (newsComment == null)
             {
@@ -56,7 +56,7 @@ namespace _21_IF4101_Transactional_API.Controllers
         [HttpPost]
         public async Task<ActionResult<News>> PostNewsComment(NewsComment newsComment)
         {
-            _context.NewsComments.Add(newsComment);
+            _context.NewsComment.Add(newsComment);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetNewsComment", new { id = newsComment.Id }, newsComment);
@@ -68,13 +68,13 @@ namespace _21_IF4101_Transactional_API.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<NewsComment>> DeleteNewsComment(int id)
         {
-            var newsComment = await _context.NewsComments.FindAsync(id);
+            var newsComment = await _context.NewsComment.FindAsync(id);
             if (newsComment == null)
             {
                 return NotFound();
             }
 
-            _context.NewsComments.Remove(newsComment);
+            _context.NewsComment.Remove(newsComment);
             await _context.SaveChangesAsync();
 
             return newsComment;
@@ -82,7 +82,7 @@ namespace _21_IF4101_Transactional_API.Controllers
 
         private bool NewsCommentExists(int id)
         {
-            return _context.NewsComments.Any(e => e.Id == id);
+            return _context.NewsComment.Any(e => e.Id == id);
         }
     }
 }

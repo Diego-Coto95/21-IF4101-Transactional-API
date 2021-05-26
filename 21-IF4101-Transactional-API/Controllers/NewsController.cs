@@ -31,8 +31,8 @@ namespace _21_IF4101_Transactional_API.Controllers
                 Title = newsItem.Title,
                 Description = newsItem.Description,
                 Author = newsItem.Author,
-                PublicationDate = newsItem.PublicationDate,
-                ModificationDate = newsItem.ModificationDate,
+                PublicationDate = newsItem.PublicationDate.ToString(),
+                ModificationDate = newsItem.ModificationDate.ToString(),
                 FileNews = newsItem.FileNews,
                 Imagen = newsItem.Imagen
 

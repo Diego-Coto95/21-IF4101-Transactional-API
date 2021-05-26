@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\UCR\\Lenguajes\\Proyecto\\Sprint 3\\API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {}
+    "E:\\UCR\\I - 2021\\Lenguajes\\Project\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {}
   },
   "projects": {
-    "E:\\UCR\\Lenguajes\\Proyecto\\Sprint 3\\API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {
+    "E:\\UCR\\I - 2021\\Lenguajes\\Project\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UCR\\Lenguajes\\Proyecto\\Sprint 3\\API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
+        "projectUniqueName": "E:\\UCR\\I - 2021\\Lenguajes\\Project\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
         "projectName": "21-IF4101-Transactional-API",
-        "projectPath": "E:\\UCR\\Lenguajes\\Proyecto\\Sprint 3\\API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
-        "packagesPath": "C:\\Users\\WAOR\\.nuget\\packages\\",
-        "outputPath": "E:\\UCR\\Lenguajes\\Proyecto\\Sprint 3\\API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\obj\\",
+        "projectPath": "E:\\UCR\\I - 2021\\Lenguajes\\Project\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
+        "packagesPath": "C:\\Users\\José David\\.nuget\\packages\\",
+        "outputPath": "E:\\UCR\\I - 2021\\Lenguajes\\Project\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\WAOR\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\José David\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

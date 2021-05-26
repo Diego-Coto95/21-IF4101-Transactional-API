@@ -43,10 +43,10 @@ namespace _21_IF4101_Transactional_API.Models.Entities
                     .IsRequired()
                     .HasMaxLength(255);
 
-                entity.Property(e => e.FileNew)
+                entity.Property(e => e.FileNews)
                     .IsRequired()
                     .HasMaxLength(150)
-                    .HasColumnName("File_New");
+                    .HasColumnName("FileNews");
 
                 entity.Property(e => e.Imagen)
                     .IsRequired()

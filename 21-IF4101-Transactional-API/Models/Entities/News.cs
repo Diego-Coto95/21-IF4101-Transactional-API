@@ -18,7 +18,7 @@ namespace _21_IF4101_Transactional_API.Models.Entities
         public string Author { get; set; }
         public DateTime PublicationDate { get; set; }
         public DateTime ModificationDate { get; set; }
-        public string FileNew { get; set; }
+        public string FileNews { get; set; }
         public string Imagen { get; set; }
 
         public virtual ICollection<NewsComment> NewsComments { get; set; }

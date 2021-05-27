@@ -36,16 +36,18 @@ namespace _21_IF4101_Transactional_API.Controllers
         // GET: api/NewsComments/1
         [Route("[action]")]
         [HttpGet("{id}")]
-        public async Task<ActionResult<NewsComment>> GetNewsComment(int id)
+        public List<NewsComment> GetNewsComment(int id)
         {
-            var newsComment = await _context.NewsComment.FindAsync(id);
+            //var newsComment = await _context.NewsComment.FindAsync(id);
 
-            if (newsComment == null)
-            {
-                return NotFound();
-            }
-            return newsComment;
+            List<NewsComment> newsComments = (from NewsComment in _context.NewsComment
+                                              where NewsComment.IdNews == id
+                                              select NewsComment).ToList();
+
+            return newsComments;
         }
+
+
 
         // POST: api/NewsComments/PostNewsComment
         // To protect from overposting attacks, enable the specific properties you want to bind to, for

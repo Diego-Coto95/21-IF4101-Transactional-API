@@ -8564,19 +8564,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yulia\\.nuget\\packages\\": {}
+    "C:\\Users\\Vampirin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yulia\\Desktop\\API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
+      "projectUniqueName": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
       "projectName": "21-IF4101-Transactional-API",
-      "projectPath": "C:\\Users\\yulia\\Desktop\\API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
-      "packagesPath": "C:\\Users\\yulia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yulia\\Desktop\\API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\obj\\",
+      "projectPath": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API.csproj",
+      "packagesPath": "C:\\Users\\Vampirin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vampirin\\OneDrive\\Escritorio\\21-IF4101-Transactional-API\\21-IF4101-Transactional-API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\yulia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vampirin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8639,7 +8639,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
